@@ -1,8 +1,10 @@
 <h1>🛍️ Customer Shopping Behavior Analysis</h1>
 
-<img width="1429" height="814" alt="image" src="https://github.com/user-attachments/assets/1b505caf-5453-456b-a364-27181061ebdf" />
+<img width="1431" height="810" alt="image" src="https://github.com/user-attachments/assets/9ba77b9b-492a-4143-b53e-5bdf9b5368a2" />
+
 
 <h3>End-to-End Python (EDA) + SQL + Power BI Data Analytics Project</h3>
+
 
 <hr>
 
@@ -170,4 +172,5 @@ and make data-driven marketing and sales decisions.
 Aspiring Data Analyst<br>
 Skills: Python | SQL | Power BI | Data Analysis
 </p>
+
 
