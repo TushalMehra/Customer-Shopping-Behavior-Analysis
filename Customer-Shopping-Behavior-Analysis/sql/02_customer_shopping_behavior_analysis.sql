@@ -43,7 +43,7 @@ SELECT subscription_status,
        ROUND(SUM(purchase_amount),2) AS total_revenue
 FROM customer
 GROUP BY subscription_status
-ORDER BY total_revenue,avg_spend DESC;
+ORDER BY total_revenue DESC,avg_spend DESC;
 
 
 
@@ -51,7 +51,7 @@ ORDER BY total_revenue,avg_spend DESC;
 select item_purchased, round(100 * sum(case when discount_applied = "Yes" then 1 else 0 end)/count(*),2) as discount_rate
 from customer
 group by item_purchased
-order by sum(purchase_amount) desc
+order by discount_rate desc
 limit 5;
 
 
@@ -81,7 +81,7 @@ WITH item_counts AS (
     SELECT category,
            item_purchased,
            COUNT(customer_id) AS total_orders,
-           ROW_NUMBER() OVER (PARTITION BY category ORDER BY COUNT(customer_id) DESC) AS item_rank
+           ROW_NUMBER() OVER (PARTITION BY category ORDER BY total_orders DESC) AS item_rank
     FROM customer
     GROUP BY category, item_purchased
 )
